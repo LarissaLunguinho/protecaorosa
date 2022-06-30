@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  
+}
+
+@media screen and (max-height: 900px) {
+  .overlay .closebtn {
+  top: 15px;
+  right: 35px;
+  }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.navbar {
+  background-color: black;
+  box-shadow: 10px 10px 10px 10px #e9967a;
+}
+
+.logo-menu {
+  width: 30%;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #ffc451;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #151515;
+  font-weight: 400;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
+  background-color: #ffc451;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+.th{
+    min-width: 450px;
+}
+
+/*
+#menu ul{
+  list-style: none;
+  background-color: black;
+  text-align: right;
+  max-height: 500px;
+  box-shadow: 10px 10px 10px 10px #E9967A;
+  }
+#menu ul li{
+      display: inline;
+      color: white;
+  }
+#menu ul li a{
+      color: white;
+      padding: 18px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all.6s;
+  }
+.titulo{
+    color: #DEB887;
+    text-shadow: 4px 0px 8px #bc5663;
+    font-weight: bold;
+    font-family: Impact, sans-serif;
+    font-size: 50px;
+    padding: 0.2%;
+}  */
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.2%;
+}    
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+    background-color:#DEB887; 
+    background-image: linear-gradient( #FFFFAC, #FFFFE0, #FFE4B5);
+} /* FORMATAÇÃO DA PAGINA */
+
+.texto-sobre h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.texto-sobre p{
+    margin: 20px 0;
+    color: black;
+    font-size: 17px;
+    font-weight:bold;
+    max-width: 800px;
+}
+.texto-sobre{
+    margin-top: 50px;
+}
+p {
+  margin: 0;
+  text-indent: 3ch;
+  padding-left: 20px;
+}
+table, th, td{
+  width: 850px;
+  height: 50px;
+  border-collapse: collapse;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+tr:hover {background-color: #f8b6e7;}
+
+a.links:link /*a vista*/{
+  color:black;
+  font-weight: bold;
+  text-decoration:none;
+}
+a.links:visited /*quando ja foi clicado*/{
+  color:black;
+  text-decoration:line-through;
+  font-weight: bold;
+}
+a.links:hover /*quando passa o mouse em cima*/{
+  color:#e63046;
+  
+  text-decoration:none;
+  font-weight: bold;
+}
+a.links:active /*quando clica*/
+{ 
+  color:#ff0000;
+  text-decoration:none;
+  background-color:#f1788c;
+  font-weight: bold; 
+}
